@@ -6,9 +6,9 @@ use App\Exceptions\GeneralException;
 use App\Models\Menu\Menu;
 use App\Repositories\BaseRepository;
 use DB;
-//use App\Events\Backend\CMSPages\CMSPageCreated;
-//use App\Events\Backend\CMSPages\CMSPageDeleted;
-//use App\Events\Backend\CMSPages\CMSPageUpdated;
+//use App\Events\Backend\Pages\PageCreated;
+//use App\Events\Backend\Pages\PageDeleted;
+//use App\Events\Backend\Pages\PageUpdated;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -57,7 +57,7 @@ class MenuRepository extends BaseRepository
         $menu->created_by = access()->user()->id;
         DB::transaction(function () use ($input, $menu) {
             if ($menu->save()) {
-                //event(new CMSPageCreated($menu));
+                //event(new PageCreated($menu));
                 return true;
             }
 
@@ -66,7 +66,7 @@ class MenuRepository extends BaseRepository
     }
 
     /**
-     * @param Model $permission
+     * @param Model $menu
      * @param  $input
      *
      * @throws GeneralException
@@ -85,7 +85,7 @@ class MenuRepository extends BaseRepository
 
         DB::transaction(function () use ($menu, $input) {
             if ($menu->save()) {
-                //event(new CMSPageUpdated($menu));
+                //event(new PageUpdated($menu));
                 return true;
             }
 
@@ -94,7 +94,7 @@ class MenuRepository extends BaseRepository
     }
 
     /**
-     * @param Model $cmspage
+     * @param Model $menu
      *
      * @throws GeneralException
      *
@@ -104,7 +104,7 @@ class MenuRepository extends BaseRepository
     {
         DB::transaction(function () use ($menu) {
             if ($menu->delete()) {
-                //event(new CMSPageDeleted($menu));
+                //event(new PageDeleted($menu));
                 return true;
             }
 

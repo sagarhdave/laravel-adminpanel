@@ -23,13 +23,13 @@ Route::any('generateSlug', function (\Illuminate\Http\Request $request) {
 })->name('generate.slug');
 
 /*
- * CMS Pages Management
+ * Pages Management
  */
-Route::group(['namespace' => 'CMSPages'], function () {
-    Route::resource('cmspages', 'CMSPagesController', ['except' => ['show']]);
+Route::group(['namespace' => 'Pages'], function () {
+    Route::resource('pages', 'PagesController', ['except' => ['show']]);
 
     //For DataTables
-    Route::post('cmspages/get', 'CMSPagesTableController')->name('cmspages.get');
+    Route::post('pages/get', 'PagesTableController')->name('pages.get');
 });
 
 /*

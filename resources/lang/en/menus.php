@@ -57,12 +57,12 @@ return [
             'system'    => 'System',
         ],
 
-        'cmspages' => [
-            'all'        => 'All CMS Page',
-            'create'     => 'Create CMS Page',
-            'edit'       => 'Edit CMS Page',
-            'management' => 'CMS Page Management',
-            'main'       => 'CMS Pages',
+        'pages' => [
+            'all'        => 'All Page',
+            'create'     => 'Create Page',
+            'edit'       => 'Edit Page',
+            'management' => 'Page Management',
+            'main'       => 'Pages',
         ],
 
         'blogs' => [
@@ -78,7 +78,7 @@ return [
             'create'     => 'Create Blog Category',
             'edit'       => 'Edit Blog Category',
             'management' => 'Blog Category Management',
-            'main'       => 'CMS Pages',
+            'main'       => 'Blog Categories',
         ],
 
         'blogtags' => [

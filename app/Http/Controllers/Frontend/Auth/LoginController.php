@@ -21,7 +21,7 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * @var CMSPagesRepository
+     * @var PushNotification
      */
     protected $notification;
 

@@ -1,11 +1,11 @@
 var FinBuilders = {
 
-    
+
     /**
-     * Cmspage
+     * Page
      *
      */
-    Cmspage:
+    Page:
     {
         init: function()
         {
@@ -90,15 +90,15 @@ var FinBuilders = {
                 var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
                 var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
 
-                var cmsURL = "/" + 'laravel-filemanager?field_name=' + field_name;
+                var URL = "/" + 'laravel-filemanager?field_name=' + field_name;
                 if (type == 'image') {
-                cmsURL = cmsURL + "&type=Images";
+                URL = URL + "&type=Images";
                 } else {
-                cmsURL = cmsURL + "&type=Files";
+                URL = URL + "&type=Files";
                 }
 
                 tinyMCE.activeEditor.windowManager.open({
-                    file : cmsURL,
+                    file : URL,
                     title : 'Filemanager',
                     width : x * 0.8,
                     height : y * 0.8,
@@ -115,7 +115,7 @@ var FinBuilders = {
     },
 
     emailTemplate: {
-        
+
         selectors: {
             emailtemplateSelection: jQuery(".select2")
         },
@@ -158,7 +158,7 @@ var FinBuilders = {
      */
     Faq:
     {
-        selectors: 
+        selectors:
         {
         },
 
@@ -198,7 +198,7 @@ var FinBuilders = {
 
     DataTableSearch: {
         init: function (dataTable) {
-            
+
             // Header All search columns
             $("div.dataTables_filter input").unbind();
             $("div.dataTables_filter input").keypress( function (e)
@@ -210,7 +210,7 @@ var FinBuilders = {
             });
 
             // Individual columns search
-            $('.search-input-text').on( 'keypress', function (e) {   
+            $('.search-input-text').on( 'keypress', function (e) {
                 // for text boxes
                 if (e.keyCode == 13)
                 {
@@ -221,7 +221,7 @@ var FinBuilders = {
             });
 
             // Individual columns search
-            $('.search-input-select').on( 'change', function (e) {   
+            $('.search-input-select').on( 'change', function (e) {
                 // for dropdown
                 var i =$(this).attr('data-column');  // getting column index
                 var v =$(this).val();  // getting search input value
@@ -229,13 +229,13 @@ var FinBuilders = {
             });
 
             // Individual columns reset
-            $('.reset-data').on( 'click', function (e) { 
+            $('.reset-data').on( 'click', function (e) {
                 var textbox = $(this).prev('input'); // Getting closest input field
                 var i =textbox.attr('data-column');  // Getting column index
                 $(this).prev('input').val(''); // Blank the serch value
                 dataTable.api().columns(i).search("").draw();
             });
-            
+
              //Copy button
             $('#copyButton').click(function(){
                 $('.copyButton').trigger('click');

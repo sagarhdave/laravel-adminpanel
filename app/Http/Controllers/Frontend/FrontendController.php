@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Cities\City;
 use App\Models\Settings\Setting;
 use App\Models\States\State;
-use App\Repositories\Frontend\CMSPages\CMSPagesRepository;
+use App\Repositories\Frontend\Pages\PagesRepository;
 use Illuminate\Http\Request;
 
 /**
@@ -70,13 +70,13 @@ class FrontendController extends Controller
     }
 
     /**
-     * show cmspage by pageslug.
+     * show page by pageslug.
      */
-    public function showCMSPage($page_slug, CMSPagesRepository $RepositoryContract)
+    public function showPage($page_slug, PagesRepository $RepositoryContract)
     {
         $result = $RepositoryContract->findBySlug($page_slug);
 
-        return view('frontend.cmspages.index')
-            ->withCmspages($result);
+        return view('frontend.pages.index')
+            ->withPages($result);
     }
 }

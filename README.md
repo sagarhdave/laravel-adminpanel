@@ -12,7 +12,7 @@ For Laravel 5 Boilerplate Features : [Features](https://github.com/rappasoft/lar
 ## Additional Features
 * Built-in Laravel Boilerplate CRUD Generator,
 * Dynamic Menu/Sidebar Builder
-* CMS Pages Module
+* Pages Module
 * Email Template Module
 * Blog Module
 * FAQ Module

@@ -62,9 +62,9 @@ class ModulesTableSeeder extends Seeder
                 'created_at'            => Carbon::now(),
             ],
             [
-                'name'                  => trans('labels.backend.cmspages.title'),
-                'url'                   => 'admin.cmspages.index',
-                'view_permission_id'    => 'view-cms-pages',
+                'name'                  => trans('labels.backend.pages.title'),
+                'url'                   => 'admin.pages.index',
+                'view_permission_id'    => 'view-pages',
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],

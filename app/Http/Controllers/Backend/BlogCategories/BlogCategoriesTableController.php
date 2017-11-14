@@ -19,7 +19,7 @@ class BlogCategoriesTableController extends Controller
     protected $blogcategories;
 
     /**
-     * @param BlogCategoriesRepository $cmspages
+     * @param BlogCategoriesRepository $blogcategories
      */
     public function __construct(BlogCategoriesRepository $blogcategories)
     {

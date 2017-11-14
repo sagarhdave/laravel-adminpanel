@@ -19,7 +19,7 @@ class BlogTagsTableController extends Controller
     protected $blogtags;
 
     /**
-     * @param BlogTagsRepository $cmspages
+     * @param BlogTagsRepository $blogtags
      */
     public function __construct(BlogTagsRepository $blogtags)
     {

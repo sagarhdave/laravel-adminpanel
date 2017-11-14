@@ -28,10 +28,10 @@ return [
             'deleted' => 'deleted permission',
             'updated' => 'updated permission',
         ],
-        'cmspages' => [
-            'created' => 'created CMS Page',
-            'deleted' => 'deleted CMS Page',
-            'updated' => 'updated CMS Page',
+        'pages' => [
+            'created' => 'created Page',
+            'deleted' => 'deleted Page',
+            'updated' => 'updated Page',
         ],
         'blogcategories' => [
             'created' => 'created Blog Category',

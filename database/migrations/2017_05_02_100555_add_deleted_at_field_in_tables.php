@@ -19,7 +19,7 @@ class AddDeletedAtFieldInTables extends Migration
         Schema::table('permissions', function (Blueprint $table) {
             $table->timestamp('deleted_at')->nullable();
         });
-        Schema::table('cms_pages', function (Blueprint $table) {
+        Schema::table('pages', function (Blueprint $table) {
             $table->timestamp('deleted_at')->nullable();
         });
     }
@@ -37,7 +37,7 @@ class AddDeletedAtFieldInTables extends Migration
         Schema::table('permissions', function (Blueprint $table) {
             $table->dropColumn('deleted_at');
         });
-        Schema::table('cms_pages', function (Blueprint $table) {
+        Schema::table('pages', function (Blueprint $table) {
             $table->dropColumn('deleted_at');
         });
     }
